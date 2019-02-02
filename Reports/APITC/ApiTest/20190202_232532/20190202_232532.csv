@@ -1,0 +1,19 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+ApiTest,,,2019-02-02 23:25:53,2019-02-02 23:26:15,22.018s,FAILED
+,,,,,,
+Test Cases/Calculatorcases/AdditionTC,,,2019-02-02 23:25:53,2019-02-02 23:26:06,12.322s,FAILED
+"sendRequest(findTestObject(""CalculatorAddition/Addition""))",,,2019-02-02 23:25:55,2019-02-02 23:26:02,7.258s,PASSED
+"response = sendRequestAndVerify(findTestObject(""CalculatorAddition/Addition""))",,,2019-02-02 23:26:02,2019-02-02 23:26:05,2.998s,PASSED
+"verifyElementPropertyValue(response, ""AddResponse.AddResult"", ""3"")",,,2019-02-02 23:26:05,2019-02-02 23:26:06,0.976s,FAILED
+,,,,,,
+Test Cases/UserDetails/Httpmethodcase,,End to End case,2019-02-02 23:26:06,2019-02-02 23:26:12,6.470s,PASSED
+"response = sendRequestAndVerify(findTestObject(""UsersRestService/Userdetails""))",,,2019-02-02 23:26:07,2019-02-02 23:26:09,2.476s,PASSED
+"CU = sendRequestAndVerify(findTestObject(""UsersRestService/CreateUser""))",,,2019-02-02 23:26:09,2019-02-02 23:26:10,1.043s,PASSED
+"verifyElementPropertyValue(CU, ""name"", ""morpheus"")",,,2019-02-02 23:26:10,2019-02-02 23:26:10,0.152s,PASSED
+"UU = sendRequestAndVerify(findTestObject(""UsersRestService/UpdateUser""))",,,2019-02-02 23:26:10,2019-02-02 23:26:11,1.023s,PASSED
+"verifyElementPropertyValue(UU, ""job"", ""zion resident"")",,,2019-02-02 23:26:11,2019-02-02 23:26:11,0.054s,PASSED
+"DU = sendRequestAndVerify(findTestObject(""UsersRestService/DeleteUser""))",,,2019-02-02 23:26:11,2019-02-02 23:26:12,0.955s,PASSED
+,,,,,,
+Test Cases/UserDetails/UserDetailsTC,,,2019-02-02 23:26:12,2019-02-02 23:26:15,2.268s,PASSED
+"response = sendRequestAndVerify(findTestObject(""UsersRestService/Userdetails""))",,,2019-02-02 23:26:13,2019-02-02 23:26:14,1.657s,PASSED
+"verifyElementPropertyValue(response, ""data[0].first_name"", ""Eve"")",,,2019-02-02 23:26:14,2019-02-02 23:26:15,0.051s,PASSED
